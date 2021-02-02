@@ -9,7 +9,7 @@ public class Lab2 {
     private static BufferedWriter fileWriter;
 
 
-
+    //trash main
     public static void main(String[] args) throws IOException{
         File myFile = newFile("firstFile.txt");
         FileReader fileReader = new FileReader(MyFile);
