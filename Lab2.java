@@ -12,21 +12,7 @@ public class Lab2 {
     //trash main
     public static void main(String[] args) throws Exception{
 
-        //ska denna ligga i mainen eller consoleInput()?
-        /*
-        String input = consoleInput();
-        switch (arg){
-            case "end":
-                System.out.println("Bye.");
-            case "1":
-                System.out.println("Load from file");
-                System.out.println("File name: ");
-                consoleReader.readLine();
-                if(line.equals("Sourcetext.txt")){
-
-                }
-        }
-        */
+        consoleInput(arg[0]);
         FileReader fr = new FileReader("src/lab2/Sourcetext.txt");
         BufferedReader br = new BufferedReader(fr);
         String result;
@@ -45,6 +31,23 @@ public class Lab2 {
         try{
             System.out.println("Select option: ");
             String line = consoleReader.readLine();
+            switch (line){
+                case "end":
+                    System.out.println("Bye.");
+                    break;
+                case "1":
+                    System.out.println("Load from file");
+                    System.out.println("File name: ");
+                    String choice = consoleReader.readLine();
+                    if(!choice.equals("Sourcetext.txt")){
+                        System.out.println("File does not exist!");
+                    }
+                    else{
+
+                    }
+
+
+            }
 
         } catch (IOException e) {
             return "";
